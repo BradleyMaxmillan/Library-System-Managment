@@ -3,6 +3,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import bookRoutes from "./routes/bookRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import studentRoutes from "./routes/studentRoutes.js";
+import loanRoutes from "./routes/loanRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -20,7 +23,10 @@ app.get('/', (req, res) => {
     res.send("📚 Library Managment API is running...");
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/books",bookRoutes);
+app.use("/api/students", studentRoutes);
+app.use("/api/loans", loanRoutes);
 const PORT =process.env.PORT || 5000;
 
 app.listen(PORT,()=>console.log(`🚀 server running on port ${PORT}`));
