@@ -2,6 +2,8 @@
 
 A full-stack library management application for tracking books, students, borrowing activity, and circulation analytics.
 
+![Library System Screenshot](doc/library_system.png)
+
 This project includes:
 
 - A React + Vite frontend for the admin dashboard
@@ -234,4 +236,3 @@ Demo login after seeding:
 - This is an admin-facing system, not a public library member portal.
 - The frontend and backend are managed as separate apps inside the same repository.
 - There is currently no combined root script to run both apps together.
-
